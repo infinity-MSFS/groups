@@ -1,7 +1,7 @@
 {
 	"aero_dynamics": {
 		"beta": {
-			"background": "https://cdn.discordapp.com/attachments/991766850742530079/1001207207964180530/Aero_Dynamics.png?size=4096"
+			"background": "https://media.discordapp.net/attachments/991766850742530079/1001207207964180530/Aero_Dynamics.png?ex=661d7ddf&is=660b08df&hm=b71c25037ea0f334eb0e58f2def16891a7eaf3cde25eee07fbb88ba7e2a59fb0&=&format=webp&quality=lossless"
 		},
 		"logo": "https://media.discordapp.net/attachments/883254251957133342/1207878715128684607/51cb3f6cd5a0641803180585c5e139c2.png?ex=66189eb6&is=660629b6&hm=98d8dc10e18fc71eef26cfd1893e0e91fffd4ce7ebf7b63f90bb9d32539a88f9&",
 		"name": "Aero Dynamics",
@@ -55,7 +55,7 @@
 	},
 	"delta_sim": {
 		"beta": {
-			"background": "https://cdn.discordapp.com/attachments/819454123619123221/1206826612541227079/Microsoft_Flight_Simulator_2024-02-12_1_10_55_AM_2.png?ex=65dd6bde&is=65caf6de&hm=c5fd01d09bc34822d91380db70715be550eeae6ea0c98ff136482dfaa6ccea1e&"
+			"background": "https://cdn.discordapp.com/attachments/991766850742530079/1224581346937147413/Microsoft_Flight_Simulator_2024-02-12_1_10_55_AM.png?ex=661e0340&is=660b8e40&hm=b4167128d7aa5e1870342594ba40dc04390f03f816c02012377c58e5590db421&"
 		},
 		"logo": "https://cdn.discordapp.com/attachments/991766850742530079/1224579584536875078/LOGO_FULL.png?ex=661e019c&is=660b8c9c&hm=c15d9ac152c8066b6ea9df506ae8564e4e81fefea16c80c7c685addc6eaf3a75&",
 		"name": "Delta Simulations",
@@ -66,7 +66,7 @@
 		"path": "/delta",
 		"projects": [
 			{
-				"background": "https://cdn.discordapp.com/attachments/819454123619123221/1206826612541227079/Microsoft_Flight_Simulator_2024-02-12_1_10_55_AM_2.png?ex=65dd6bde&is=65caf6de&hm=c5fd01d09bc34822d91380db70715be550eeae6ea0c98ff136482dfaa6ccea1e&",
+				"background": "https://cdn.discordapp.com/attachments/991766850742530079/1224581346937147413/Microsoft_Flight_Simulator_2024-02-12_1_10_55_AM.png?ex=661e0340&is=660b8e40&hm=b4167128d7aa5e1870342594ba40dc04390f03f816c02012377c58e5590db421&",
 				"changelog": "- Initial release",
 				"date": "May 2022",
 				"description": "We are dedicated to creating realistic and immersive flight simulation experiences. Our team of passionate and meticulous developers strive to create an authentic, detailed simulation of the C-17. Through close collaboration with real-world operators and  over three years of work, we are proud to call our C-17 the most accurate portrayal on the civilian market. We aim to replicate all of the intricacies and nuances that a unique aircraft like the C-17 is full of, leaving no stone unturned. We continually expand and improve on our work, and work closely with like-minded development groups to ensure that we can give you the best experience possible.",
@@ -104,7 +104,7 @@
 	},
 	"lunar_sim": {
 		"beta": {
-			"background": "https://cdn.discordapp.com/attachments/893768636592955412/1206568786472476732/thumbnail.jpg?ex=65dc7bbf&is=65ca06bf&hm=83962888a63380b81aaea2fbb7e588ed3e9ba56ae27011ebc7abfcaa610a45a7&"
+			"background": "https://cdn.discordapp.com/attachments/991766825723502642/1224601386491318282/10-2.png?ex=661e15ea&is=660ba0ea&hm=b5f8ca928ccf4254c3e26b88d3467a6210766d72167649d3dfc2d638d9a181b3&"
 		},
 		"logo": "https://lunar-simulations.github.io/lunar_sim_site_logo.png",
 		"name": "Lunar Simulations",
@@ -115,7 +115,7 @@
 		"path": "/lunar",
 		"projects": [
 			{
-				"background": "https://cdn.discordapp.com/attachments/893768636592955412/1206568786472476732/thumbnail.jpg?ex=65dc7bbf&is=65ca06bf&hm=83962888a63380b81aaea2fbb7e588ed3e9ba56ae27011ebc7abfcaa610a45a7&",
+				"background": "https://cdn.discordapp.com/attachments/885068119733837855/1067247098187235328/Microsoft_Flight_Simulator_Screenshot_2022.04.27_-_22.20.21.54.png?ex=661dcd50&is=660b5850&hm=7ee48bb5af953c1ec433397446c1f35e63fcb40e273092f3e7aeaab8fc5653ee&",
 				"changelog": "- Initial release",
 				"date": "May 2024",
 				"description": "Lunar Simulations is delighted to unveil our latest project: the Boeing 767 Classic series, representing our inaugural venture into the realm of airliner simulation. We are particularly proud to introduce the classic lineup of 767 aircraft as the joint first release in our lineup. Our team has invested countless hours in crafting this aircraft, and we eagerly anticipate witnessing the experiences you create with it.\nThe Lunar Simulations Boeing 767 Classic series features meticulously designed exterior and interior models, along with custom screens and systems, ensuring a truly immersive experience for pilots. To foster community engagement and development, we have decided to open-source the Boeing 767 Classic series on GitHub. This commitment underscores our dedication to ongoing support and improvement, with regular updates and enhancements informed by feedback from our community. For the latest information and updates, we invite you to join our Discord server and become part of the Lunar Simulations community.",
@@ -127,7 +127,7 @@
 					"repoName": "BambooTracker",
 					"version": "v0.6.3"
 				},
-				"pageBackground": "https://cdn.discordapp.com/attachments/991766825723502642/1224600645718376509/bg.png?ex=661e1539&is=660ba039&hm=df1d50563a2cab54d0474b6002463013be3fbdcecc4c88927b0fe517c66c29dc&",
+				"pageBackground": "https://cdn.discordapp.com/attachments/991766825723502642/1224601386491318282/10-2.png?ex=661e15ea&is=660ba0ea&hm=b5f8ca928ccf4254c3e26b88d3467a6210766d72167649d3dfc2d638d9a181b3&",
 				"variants": [
 					"Boeing 767-200",
 					"Boeing 767-200ER",
@@ -138,7 +138,7 @@
 				"version": "1.0.0"
 			},
 			{
-				"background": "https://cdn.discordapp.com/attachments/893768636592955412/1206568786472476732/thumbnail.jpg?ex=65dc7bbf&is=65ca06bf&hm=83962888a63380b81aaea2fbb7e588ed3e9ba56ae27011ebc7abfcaa610a45a7&",
+				"background": "https://cdn.discordapp.com/attachments/885068119733837855/1067247098187235328/Microsoft_Flight_Simulator_Screenshot_2022.04.27_-_22.20.21.54.png?ex=661dcd50&is=660b5850&hm=7ee48bb5af953c1ec433397446c1f35e63fcb40e273092f3e7aeaab8fc5653ee&",
 				"changelog": "- Initial release",
 				"date": "May 2024",
 				"description": "Lunar Simulations is delighted to unveil our latest project: the Boeing 767-300F, representing our inaugural venture into the realm of airliner simulation. We are particularly proud to introduce the -300F variant as the joint first release in our lineup, with plans for additional variants in the future. Our dedicated team has invested countless hours in crafting this aircraft, and we eagerly anticipate witnessing the experiences you create with it.\nThe Lunar Simulations Boeing 767-300F features meticulously designed exterior and interior models, along with custom screens and systems, ensuring a truly immersive experience for pilots. To foster community engagement and development, we have decided to open-source the Boeing 767-300F on GitHub. This commitment underscores our dedication to ongoing support and improvement, with regular updates and enhancements informed by feedback from our community. For the latest information and updates, we invite you to join our Discord server and become part of the Lunar Simulations community.",
@@ -155,7 +155,7 @@
 				"version": "1.0.0"
 			},
 			{
-				"background": "https://cdn.discordapp.com/attachments/1137612565090926683/1204407735030915092/4.png?ex=65ddd99c&is=65cb649c&hm=f13ef4f5c329f8771e30144534a6b66f5b0726178e1103111ed4c1e52cc27c85&",
+				"background": "https://cdn.discordapp.com/attachments/991766850742530079/1224614190929547264/Microsoft_Flight_Simulator_2024-03-25_4_42_37_PM.png?ex=661e21d7&is=660bacd7&hm=9a396b47f944882208f0e6dc42524095b1d75011bd6a500a9646ddd48c4c8553&",
 				"changelog": "- Initial release",
 				"date": "May 2024",
 				"description": "Lunar Simulations is delighted to unveil our latest project: the Boeing KC-46, representing our inaugural venture into the realm of airliner simulation. We are particularly proud to introduce the -46 variant as the joint first release in our lineup, with plans for additional variants in the future. Our dedicated team has invested countless hours in crafting this aircraft, and we eagerly anticipate witnessing the experiences you create with it.\nThe Lunar Simulations Boeing KC-46 features meticulously designed exterior and interior models, along with custom screens and systems, ensuring a truly immersive experience for pilots. To foster community engagement and development, we have decided to open-source the Boeing KC-46 on GitHub. This commitment underscores our dedication to ongoing support and improvement, with regular updates and enhancements informed by feedback from our community. For the latest information and updates, we invite you to join our Discord server and become part of the Lunar Simulations community.",
@@ -167,7 +167,7 @@
 					"repoName": "soundnode-app",
 					"version": "7.0.0"
 				},
-				"pageBackground": "https://cdn.discordapp.com/attachments/991766825723502642/1224600645718376509/bg.png?ex=661e1539&is=660ba039&hm=df1d50563a2cab54d0474b6002463013be3fbdcecc4c88927b0fe517c66c29dc&",
+				"pageBackground": "https://cdn.discordapp.com/attachments/991766850742530079/1224614190929547264/Microsoft_Flight_Simulator_2024-03-25_4_42_37_PM.png?ex=661e21d7&is=660bacd7&hm=9a396b47f944882208f0e6dc42524095b1d75011bd6a500a9646ddd48c4c8553&",
 				"variants": ["Boeing KC-46", "Boeing E-767"],
 				"version": "1.0.0"
 			}
