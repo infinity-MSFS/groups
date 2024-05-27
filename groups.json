@@ -174,7 +174,7 @@
 		],
 		"update": false
 	},
-	"ouroboros": {
+	"test1": {
 		"beta": {
 			"background": "https://cdn.discordapp.com/attachments/991766892106747995/1207883477261750382/Xray2.png?ex=6618a326&is=66062e26&hm=627281201cd4754d7bd52b1a0f40078209a30a909e8c1bec6e34412729c0e51f&"
 		},
@@ -218,7 +218,7 @@
 		],
 		"update": false
 	},
-	"ouroboros": {
+	"test2": {
 		"beta": {
 			"background": "https://cdn.discordapp.com/attachments/991766892106747995/1207883477261750382/Xray2.png?ex=6618a326&is=66062e26&hm=627281201cd4754d7bd52b1a0f40078209a30a909e8c1bec6e34412729c0e51f&"
 		},
@@ -262,7 +262,7 @@
 		],
 		"update": false
 	},
-	"ouroboros": {
+	"test3": {
 		"beta": {
 			"background": "https://cdn.discordapp.com/attachments/991766892106747995/1207883477261750382/Xray2.png?ex=6618a326&is=66062e26&hm=627281201cd4754d7bd52b1a0f40078209a30a909e8c1bec6e34412729c0e51f&"
 		},
@@ -306,7 +306,7 @@
 		],
 		"update": false
 	},
-	"ouroboros": {
+	"test4": {
 		"beta": {
 			"background": "https://cdn.discordapp.com/attachments/991766892106747995/1207883477261750382/Xray2.png?ex=6618a326&is=66062e26&hm=627281201cd4754d7bd52b1a0f40078209a30a909e8c1bec6e34412729c0e51f&"
 		},
@@ -350,7 +350,7 @@
 		],
 		"update": false
 	},
-	"ouroboros": {
+	"test5": {
 		"beta": {
 			"background": "https://cdn.discordapp.com/attachments/991766892106747995/1207883477261750382/Xray2.png?ex=6618a326&is=66062e26&hm=627281201cd4754d7bd52b1a0f40078209a30a909e8c1bec6e34412729c0e51f&"
 		},
