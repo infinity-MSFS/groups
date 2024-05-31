@@ -43,107 +43,31 @@
 			"secondary": "#2a2fff"
 		}
 	},
-	"aero_dynamics": {
-		"name": "Aero Dynamics",
+	"qbitsim": {
+		"name": "qbitsim",
 		"projects": [
 			{
-				"name": "KC-10",
+				"name": "Boeing 737-800",
 				"version": "1.0.0",
-				"date": "May 2022",
-				"changelog": "- Initial release",
-				"overview": "Welcome to Aero Dynamics, where our passion for aviation drives us to create the most authentic KC/DC-10 experience for enthusiasts worldwide. As a dedicated group of volunteers, we are committed to delivering a meticulously crafted aircraft that reflects our love for the KC-10 Extender. We aim to bring the KC-10 to life with unparalleled attention to detail, from its operational functionality to its intricate interior design.\nOur team prioritizes authenticity and accessibility, offering the KC-10 as freeware upon completion. With a focus on full fidelity, our aircraft will feature operational stations for pilots, copilots, flight engineers, and boom operators, delivering a comprehensive experience for solo users. While air refueling may not be available immediately in MSFS, it's a feature we're actively working on, along with the possibility of future compatibility with shared cockpit functionalities.\nStay tuned for updates on our progress as we strive to bring the KC/DC-10 to life, honoring its legacy with unparalleled realism and dedication to excellence. Join us on this journey as we push the boundaries of flight simulation and celebrate the iconic KC-10 Extender.",
-				"description": "Welcome to Aero Dynamics, where our passion for aviation drives us to create the most authentic KC/DC-10 experience for enthusiasts worldwide. As a dedicated group of volunteers, we are committed to delivering a meticulously crafted aircraft that reflects our love for the KC-10 Extender. We aim to bring the KC-10 to life with unparalleled attention to detail, from its operational functionality to its intricate interior design.\nOur team prioritizes authenticity and accessibility, offering the KC-10 as freeware upon completion. With a focus on full fidelity, our aircraft will feature operational stations for pilots, copilots, flight engineers, and boom operators, delivering a comprehensive experience for solo users. While air refueling may not be available immediately in MSFS, it's a feature we're actively working on, along with the possibility of future compatibility with shared cockpit functionalities.\nStay tuned for updates on our progress as we strive to bring the KC/DC-10 to life, honoring its legacy with unparalleled realism and dedication to excellence. Join us on this journey as we push the boundaries of flight simulation and celebrate the iconic KC-10 Extender.",
-				"background": "https://cdn.jsdelivr.net/gh/infinity-MSFS/assets@master/aero_dynamics/kc10_background.webp",
-				"pageBackground": "https://cdn.jsdelivr.net/gh/infinity-MSFS/assets@master/aero_dynamics/kc10_page_background.webp",
-				"variants": null,
-				"package": null
-			},
-			{
-				"name": "10 Tanker",
-				"version": "1.0.0",
-				"date": "May 2022",
-				"changelog": "- Initial release",
-				"overview": "Welcome to Aero Dynamics, where our passion for aviation drives us to create the most authentic KC/DC-10 experience for enthusiasts worldwide. As a dedicated group of volunteers, we are committed to delivering a meticulously crafted aircraft that reflects our love for the KC-10 Extender. We aim to bring the KC-10 to life with unparalleled attention to detail, from its operational functionality to its intricate interior design.\nOur team prioritizes authenticity and accessibility, offering the KC-10 as freeware upon completion. With a focus on full fidelity, our aircraft will feature operational stations for pilots, copilots, flight engineers, and boom operators, delivering a comprehensive experience for solo users. While air refueling may not be available immediately in MSFS, it's a feature we're actively working on, along with the possibility of future compatibility with shared cockpit functionalities.\nStay tuned for updates on our progress as we strive to bring the KC/DC-10 to life, honoring its legacy with unparalleled realism and dedication to excellence. Join us on this journey as we push the boundaries of flight simulation and celebrate the iconic KC-10 Extender.",
-				"description": "Welcome to Aero Dynamics, where our passion for aviation drives us to create the most authentic KC/DC-10 experience for enthusiasts worldwide. As a dedicated group of volunteers, we are committed to delivering a meticulously crafted aircraft that reflects our love for the KC-10 Extender. We aim to bring the KC-10 to life with unparalleled attention to detail, from its operational functionality to its intricate interior design.\nOur team prioritizes authenticity and accessibility, offering the KC-10 as freeware upon completion. With a focus on full fidelity, our aircraft will feature operational stations for pilots, copilots, flight engineers, and boom operators, delivering a comprehensive experience for solo users. While air refueling may not be available immediately in MSFS, it's a feature we're actively working on, along with the possibility of future compatibility with shared cockpit functionalities.\nStay tuned for updates on our progress as we strive to bring the KC/DC-10 to life, honoring its legacy with unparalleled realism and dedication to excellence. Join us on this journey as we push the boundaries of flight simulation and celebrate the iconic KC-10 Extender.",
-				"background": "https://cdn.discordapp.com/attachments/862431082838229032/1036732339822264340/unknown.png?size=4096",
+				"date": "",
+				"changelog": "",
+				"overview": "...",
+				"description": "...",
+				"background": "https://cdn.jsdelivr.net/gh/infinity-MSFS/assets@master/qbitsim/737_background.webp",
 				"pageBackground": null,
 				"variants": null,
-				"package": null
-			},
-			{
-				"name": "DC-10-30",
-				"version": "1.0.0",
-				"date": "May 2022",
-				"changelog": "- Initial release",
-				"overview": "Welcome to Aero Dynamics, where our passion for aviation drives us to create the most authentic KC/DC-10 experience for enthusiasts worldwide. As a dedicated group of volunteers, we are committed to delivering a meticulously crafted aircraft that reflects our love for the KC-10 Extender. We aim to bring the KC-10 to life with unparalleled attention to detail, from its operational functionality to its intricate interior design.\nOur team prioritizes authenticity and accessibility, offering the KC-10 as freeware upon completion. With a focus on full fidelity, our aircraft will feature operational stations for pilots, copilots, flight engineers, and boom operators, delivering a comprehensive experience for solo users. While air refueling may not be available immediately in MSFS, it's a feature we're actively working on, along with the possibility of future compatibility with shared cockpit functionalities.\nStay tuned for updates on our progress as we strive to bring the KC/DC-10 to life, honoring its legacy with unparalleled realism and dedication to excellence. Join us on this journey as we push the boundaries of flight simulation and celebrate the iconic KC-10 Extender.",
-				"description": "Welcome to Aero Dynamics, where our passion for aviation drives us to create the most authentic KC/DC-10 experience for enthusiasts worldwide. As a dedicated group of volunteers, we are committed to delivering a meticulously crafted aircraft that reflects our love for the KC-10 Extender. We aim to bring the KC-10 to life with unparalleled attention to detail, from its operational functionality to its intricate interior design.\nOur team prioritizes authenticity and accessibility, offering the KC-10 as freeware upon completion. With a focus on full fidelity, our aircraft will feature operational stations for pilots, copilots, flight engineers, and boom operators, delivering a comprehensive experience for solo users. While air refueling may not be available immediately in MSFS, it's a feature we're actively working on, along with the possibility of future compatibility with shared cockpit functionalities.\nStay tuned for updates on our progress as we strive to bring the KC/DC-10 to life, honoring its legacy with unparalleled realism and dedication to excellence. Join us on this journey as we push the boundaries of flight simulation and celebrate the iconic KC-10 Extender.",
-				"background": "https://cdn.discordapp.com/attachments/862431082838229032/1124520859994947614/36Drop.png?size=4096",
-				"pageBackground": null,
-				"variants": [
-					"McDonnell Douglas DC-10-30",
-					"McDonnell Douglas DC-10-30F"
-				],
 				"package": null
 			}
 		],
 		"beta": {
-			"background": "https://media.discordapp.net/attachments/889311352617853000/1224631555893497920/KCboneyard.png?ex=661e3203&is=660bbd03&hm=5b36153538b58cc13b44b9b75574c0afa1aca1effc56bc30ff12f401f4247d57&=&format=webp&quality=lossless"
+			"background": "https://cdn.jsdelivr.net/gh/infinity-MSFS/assets@master/qbitsim/737_background.webp"
 		},
-		"logo": "https://cdn.jsdelivr.net/gh/infinity-MSFS/assets@master/aero_dynamics/logo.webp",
-		"update": true,
-		"path": "/aerodynamics",
+		"logo": "https://cdn.jsdelivr.net/gh/infinity-MSFS/assets@master/qbitsim/qbit_logo.webp",
+		"update": null,
+		"path": "qbitsim",
 		"palette": {
-			"primary": "#050912",
-			"secondary": "#050505"
-		}
-	},
-	"delta_sim": {
-		"name": "Delta Simulations",
-		"projects": [
-			{
-				"name": "Boeing C-17A",
-				"version": "V4.0",
-				"date": "May 2022",
-				"changelog": "- Initial release",
-				"overview": "We are dedicated to creating realistic and immersive flight simulation experiences. Our team of passionate and meticulous developers strive to create an authentic, detailed simulation of the C-17. Through close collaboration with real-world operators and  over three years of work, we are proud to call our C-17 the most accurate portrayal on the civilian market. We aim to replicate all of the intricacies and nuances that a unique aircraft like the C-17 is full of, leaving no stone unturned. We continually expand and improve on our work, and work closely with like-minded development groups to ensure that we can give you the best experience possible.",
-				"description": "We are dedicated to creating realistic and immersive flight simulation experiences. Our team of passionate and meticulous developers strive to create an authentic, detailed simulation of the C-17. Through close collaboration with real-world operators and  over three years of work, we are proud to call our C-17 the most accurate portrayal on the civilian market. We aim to replicate all of the intricacies and nuances that a unique aircraft like the C-17 is full of, leaving no stone unturned. We continually expand and improve on our work, and work closely with like-minded development groups to ensure that we can give you the best experience possible.",
-				"background": "https://cdn.jsdelivr.net/gh/infinity-MSFS/assets@master/delta/background.webp",
-				"pageBackground": "https://media.discordapp.net/attachments/991766850742530079/1224581346937147413/Microsoft_Flight_Simulator_2024-02-12_1_10_55_AM.png?ex=661e0340&is=660b8e40&hm=b4167128d7aa5e1870342594ba40dc04390f03f816c02012377c58e5590db421&=&format=webp&quality=lossless",
-				"variants": null,
-				"package": {
-					"owner": "Delta-Simulations",
-					"repoName": "MSFS-C-17",
-					"version": "V4.0",
-					"fileName": "deltasimulations-c17.zip"
-				}
-			},
-			{
-				"name": "Sikorsky UH-60",
-				"version": "1.0.0",
-				"date": "May 2022",
-				"changelog": "- Initial release",
-				"overview": "We are dedicated to creating realistic and immersive flight simulation experiences. Our team of passionate and meticulous developers strive to create an authentic, detailed simulation of the C-17. Through close collaboration with real-world operators and  over three years of work, we are proud to call our C-17 the most accurate portrayal on the civilian market. We aim to replicate all of the intricacies and nuances that a unique aircraft like the C-17 is full of, leaving no stone unturned. We continually expand and improve on our work, and work closely with like-minded development groups to ensure that we can give you the best experience possible.",
-				"description": "We are dedicated to creating realistic and immersive flight simulation experiences. Our team of passionate and meticulous developers strive to create an authentic, detailed simulation of the C-17. Through close collaboration with real-world operators and  over three years of work, we are proud to call our C-17 the most accurate portrayal on the civilian market. We aim to replicate all of the intricacies and nuances that a unique aircraft like the C-17 is full of, leaving no stone unturned. We continually expand and improve on our work, and work closely with like-minded development groups to ensure that we can give you the best experience possible.",
-				"background": "https://cdn.jsdelivr.net/gh/infinity-MSFS/assets@master/delta/h60_background.webp",
-				"pageBackground": "https://cdn.discordapp.com/attachments/876342259363242038/1208027069536018445/Top_down.png?ex=65e1c9e1&is=65cf54e1&hm=c5b7387a172d0e87360acd26593c12b6950e6c5da2ba091be11ebe539a5f48dc&",
-				"variants": null,
-				"package": {
-					"owner": "Delta-Simulations",
-					"repoName": "MSFS-H-60M",
-					"version": "V3.0.1-BETA",
-					"fileName": "deltasimulations-uh60.zip"
-				}
-			}
-		],
-		"beta": {
-			"background": "https://cdn.jsdelivr.net/gh/infinity-MSFS/assets@master/delta/background.webp"
-		},
-		"logo": "https://cdn.jsdelivr.net/gh/infinity-MSFS/assets@master/delta/logo.webp",
-		"update": false,
-		"path": "/delta",
-		"palette": {
-			"primary": "#4f1a00",
-			"secondary": "#efaa00"
+			"primary": "#29ABE2",
+			"secondary": "#4990D6"
 		}
 	},
 	"lunar_sim": {
@@ -216,6 +140,109 @@
 		"palette": {
 			"primary": "#080F19",
 			"secondary": "#384B5F"
+		}
+	},
+	"delta_sim": {
+		"name": "Delta Simulations",
+		"projects": [
+			{
+				"name": "Boeing C-17A",
+				"version": "V4.0",
+				"date": "May 2022",
+				"changelog": "- Initial release",
+				"overview": "We are dedicated to creating realistic and immersive flight simulation experiences. Our team of passionate and meticulous developers strive to create an authentic, detailed simulation of the C-17. Through close collaboration with real-world operators and  over three years of work, we are proud to call our C-17 the most accurate portrayal on the civilian market. We aim to replicate all of the intricacies and nuances that a unique aircraft like the C-17 is full of, leaving no stone unturned. We continually expand and improve on our work, and work closely with like-minded development groups to ensure that we can give you the best experience possible.",
+				"description": "We are dedicated to creating realistic and immersive flight simulation experiences. Our team of passionate and meticulous developers strive to create an authentic, detailed simulation of the C-17. Through close collaboration with real-world operators and  over three years of work, we are proud to call our C-17 the most accurate portrayal on the civilian market. We aim to replicate all of the intricacies and nuances that a unique aircraft like the C-17 is full of, leaving no stone unturned. We continually expand and improve on our work, and work closely with like-minded development groups to ensure that we can give you the best experience possible.",
+				"background": "https://cdn.jsdelivr.net/gh/infinity-MSFS/assets@master/delta/background.webp",
+				"pageBackground": "https://media.discordapp.net/attachments/991766850742530079/1224581346937147413/Microsoft_Flight_Simulator_2024-02-12_1_10_55_AM.png?ex=661e0340&is=660b8e40&hm=b4167128d7aa5e1870342594ba40dc04390f03f816c02012377c58e5590db421&=&format=webp&quality=lossless",
+				"variants": null,
+				"package": {
+					"owner": "Delta-Simulations",
+					"repoName": "MSFS-C-17",
+					"version": "V4.0",
+					"fileName": "deltasimulations-c17.zip"
+				}
+			},
+			{
+				"name": "Sikorsky UH-60",
+				"version": "1.0.0",
+				"date": "May 2022",
+				"changelog": "- Initial release",
+				"overview": "We are dedicated to creating realistic and immersive flight simulation experiences. Our team of passionate and meticulous developers strive to create an authentic, detailed simulation of the C-17. Through close collaboration with real-world operators and  over three years of work, we are proud to call our C-17 the most accurate portrayal on the civilian market. We aim to replicate all of the intricacies and nuances that a unique aircraft like the C-17 is full of, leaving no stone unturned. We continually expand and improve on our work, and work closely with like-minded development groups to ensure that we can give you the best experience possible.",
+				"description": "We are dedicated to creating realistic and immersive flight simulation experiences. Our team of passionate and meticulous developers strive to create an authentic, detailed simulation of the C-17. Through close collaboration with real-world operators and  over three years of work, we are proud to call our C-17 the most accurate portrayal on the civilian market. We aim to replicate all of the intricacies and nuances that a unique aircraft like the C-17 is full of, leaving no stone unturned. We continually expand and improve on our work, and work closely with like-minded development groups to ensure that we can give you the best experience possible.",
+				"background": "https://cdn.jsdelivr.net/gh/infinity-MSFS/assets@master/delta/h60_background.webp",
+				"pageBackground": "https://cdn.discordapp.com/attachments/876342259363242038/1208027069536018445/Top_down.png?ex=65e1c9e1&is=65cf54e1&hm=c5b7387a172d0e87360acd26593c12b6950e6c5da2ba091be11ebe539a5f48dc&",
+				"variants": null,
+				"package": {
+					"owner": "Delta-Simulations",
+					"repoName": "MSFS-H-60M",
+					"version": "V3.0.1-BETA",
+					"fileName": "deltasimulations-uh60.zip"
+				}
+			}
+		],
+		"beta": {
+			"background": "https://cdn.jsdelivr.net/gh/infinity-MSFS/assets@master/delta/background.webp"
+		},
+		"logo": "https://cdn.jsdelivr.net/gh/infinity-MSFS/assets@master/delta/logo.webp",
+		"update": false,
+		"path": "/delta",
+		"palette": {
+			"primary": "#4f1a00",
+			"secondary": "#efaa00"
+		}
+	},
+	"aero_dynamics": {
+		"name": "Aero Dynamics",
+		"projects": [
+			{
+				"name": "KC-10",
+				"version": "1.0.0",
+				"date": "May 2022",
+				"changelog": "- Initial release",
+				"overview": "Welcome to Aero Dynamics, where our passion for aviation drives us to create the most authentic KC/DC-10 experience for enthusiasts worldwide. As a dedicated group of volunteers, we are committed to delivering a meticulously crafted aircraft that reflects our love for the KC-10 Extender. We aim to bring the KC-10 to life with unparalleled attention to detail, from its operational functionality to its intricate interior design.\nOur team prioritizes authenticity and accessibility, offering the KC-10 as freeware upon completion. With a focus on full fidelity, our aircraft will feature operational stations for pilots, copilots, flight engineers, and boom operators, delivering a comprehensive experience for solo users. While air refueling may not be available immediately in MSFS, it's a feature we're actively working on, along with the possibility of future compatibility with shared cockpit functionalities.\nStay tuned for updates on our progress as we strive to bring the KC/DC-10 to life, honoring its legacy with unparalleled realism and dedication to excellence. Join us on this journey as we push the boundaries of flight simulation and celebrate the iconic KC-10 Extender.",
+				"description": "Welcome to Aero Dynamics, where our passion for aviation drives us to create the most authentic KC/DC-10 experience for enthusiasts worldwide. As a dedicated group of volunteers, we are committed to delivering a meticulously crafted aircraft that reflects our love for the KC-10 Extender. We aim to bring the KC-10 to life with unparalleled attention to detail, from its operational functionality to its intricate interior design.\nOur team prioritizes authenticity and accessibility, offering the KC-10 as freeware upon completion. With a focus on full fidelity, our aircraft will feature operational stations for pilots, copilots, flight engineers, and boom operators, delivering a comprehensive experience for solo users. While air refueling may not be available immediately in MSFS, it's a feature we're actively working on, along with the possibility of future compatibility with shared cockpit functionalities.\nStay tuned for updates on our progress as we strive to bring the KC/DC-10 to life, honoring its legacy with unparalleled realism and dedication to excellence. Join us on this journey as we push the boundaries of flight simulation and celebrate the iconic KC-10 Extender.",
+				"background": "https://cdn.jsdelivr.net/gh/infinity-MSFS/assets@master/aero_dynamics/kc10_background.webp",
+				"pageBackground": "https://cdn.jsdelivr.net/gh/infinity-MSFS/assets@master/aero_dynamics/kc10_page_background.webp",
+				"variants": null,
+				"package": null
+			},
+			{
+				"name": "10 Tanker",
+				"version": "1.0.0",
+				"date": "May 2022",
+				"changelog": "- Initial release",
+				"overview": "Welcome to Aero Dynamics, where our passion for aviation drives us to create the most authentic KC/DC-10 experience for enthusiasts worldwide. As a dedicated group of volunteers, we are committed to delivering a meticulously crafted aircraft that reflects our love for the KC-10 Extender. We aim to bring the KC-10 to life with unparalleled attention to detail, from its operational functionality to its intricate interior design.\nOur team prioritizes authenticity and accessibility, offering the KC-10 as freeware upon completion. With a focus on full fidelity, our aircraft will feature operational stations for pilots, copilots, flight engineers, and boom operators, delivering a comprehensive experience for solo users. While air refueling may not be available immediately in MSFS, it's a feature we're actively working on, along with the possibility of future compatibility with shared cockpit functionalities.\nStay tuned for updates on our progress as we strive to bring the KC/DC-10 to life, honoring its legacy with unparalleled realism and dedication to excellence. Join us on this journey as we push the boundaries of flight simulation and celebrate the iconic KC-10 Extender.",
+				"description": "Welcome to Aero Dynamics, where our passion for aviation drives us to create the most authentic KC/DC-10 experience for enthusiasts worldwide. As a dedicated group of volunteers, we are committed to delivering a meticulously crafted aircraft that reflects our love for the KC-10 Extender. We aim to bring the KC-10 to life with unparalleled attention to detail, from its operational functionality to its intricate interior design.\nOur team prioritizes authenticity and accessibility, offering the KC-10 as freeware upon completion. With a focus on full fidelity, our aircraft will feature operational stations for pilots, copilots, flight engineers, and boom operators, delivering a comprehensive experience for solo users. While air refueling may not be available immediately in MSFS, it's a feature we're actively working on, along with the possibility of future compatibility with shared cockpit functionalities.\nStay tuned for updates on our progress as we strive to bring the KC/DC-10 to life, honoring its legacy with unparalleled realism and dedication to excellence. Join us on this journey as we push the boundaries of flight simulation and celebrate the iconic KC-10 Extender.",
+				"background": "https://cdn.discordapp.com/attachments/862431082838229032/1036732339822264340/unknown.png?size=4096",
+				"pageBackground": null,
+				"variants": null,
+				"package": null
+			},
+			{
+				"name": "DC-10-30",
+				"version": "1.0.0",
+				"date": "May 2022",
+				"changelog": "- Initial release",
+				"overview": "Welcome to Aero Dynamics, where our passion for aviation drives us to create the most authentic KC/DC-10 experience for enthusiasts worldwide. As a dedicated group of volunteers, we are committed to delivering a meticulously crafted aircraft that reflects our love for the KC-10 Extender. We aim to bring the KC-10 to life with unparalleled attention to detail, from its operational functionality to its intricate interior design.\nOur team prioritizes authenticity and accessibility, offering the KC-10 as freeware upon completion. With a focus on full fidelity, our aircraft will feature operational stations for pilots, copilots, flight engineers, and boom operators, delivering a comprehensive experience for solo users. While air refueling may not be available immediately in MSFS, it's a feature we're actively working on, along with the possibility of future compatibility with shared cockpit functionalities.\nStay tuned for updates on our progress as we strive to bring the KC/DC-10 to life, honoring its legacy with unparalleled realism and dedication to excellence. Join us on this journey as we push the boundaries of flight simulation and celebrate the iconic KC-10 Extender.",
+				"description": "Welcome to Aero Dynamics, where our passion for aviation drives us to create the most authentic KC/DC-10 experience for enthusiasts worldwide. As a dedicated group of volunteers, we are committed to delivering a meticulously crafted aircraft that reflects our love for the KC-10 Extender. We aim to bring the KC-10 to life with unparalleled attention to detail, from its operational functionality to its intricate interior design.\nOur team prioritizes authenticity and accessibility, offering the KC-10 as freeware upon completion. With a focus on full fidelity, our aircraft will feature operational stations for pilots, copilots, flight engineers, and boom operators, delivering a comprehensive experience for solo users. While air refueling may not be available immediately in MSFS, it's a feature we're actively working on, along with the possibility of future compatibility with shared cockpit functionalities.\nStay tuned for updates on our progress as we strive to bring the KC/DC-10 to life, honoring its legacy with unparalleled realism and dedication to excellence. Join us on this journey as we push the boundaries of flight simulation and celebrate the iconic KC-10 Extender.",
+				"background": "https://cdn.discordapp.com/attachments/862431082838229032/1124520859994947614/36Drop.png?size=4096",
+				"pageBackground": null,
+				"variants": [
+					"McDonnell Douglas DC-10-30",
+					"McDonnell Douglas DC-10-30F"
+				],
+				"package": null
+			}
+		],
+		"beta": {
+			"background": "https://media.discordapp.net/attachments/889311352617853000/1224631555893497920/KCboneyard.png?ex=661e3203&is=660bbd03&hm=5b36153538b58cc13b44b9b75574c0afa1aca1effc56bc30ff12f401f4247d57&=&format=webp&quality=lossless"
+		},
+		"logo": "https://cdn.jsdelivr.net/gh/infinity-MSFS/assets@master/aero_dynamics/logo.webp",
+		"update": true,
+		"path": "/aerodynamics",
+		"palette": {
+			"primary": "#050912",
+			"secondary": "#050505"
 		}
 	}
 }
