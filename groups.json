@@ -44,7 +44,7 @@
 		}
 	},
 	"qbitsim": {
-		"name": "qbitsim",
+		"name": "QBit Simulations",
 		"projects": [
 			{
 				"name": "Boeing 737-800",
@@ -66,8 +66,8 @@
 		"update": null,
 		"path": "qbitsim",
 		"palette": {
-			"primary": "#29ABE2",
-			"secondary": "#4990D6"
+			"primary": "#256f8f",
+			"secondary": "#4e4780"
 		}
 	},
 	"lunar_sim": {
