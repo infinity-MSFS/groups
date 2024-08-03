@@ -248,6 +248,6 @@
       "primary": "#080F19",
       "secondary": "#384B5F"
     },
-    "hide": false
+    "hide": true
   }
 }
