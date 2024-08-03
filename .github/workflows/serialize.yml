@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 0 # Ensure the full history is fetched for committing changes
 
       - name: Set up Rust
-        uses: actions/setup-rust@v1
+        uses: rust-lang/setup-rust@v1
         with:
           rust-version: 1.70
 
