@@ -1,0 +1,40 @@
+name: Convert JSON to BIN
+
+on:
+  push:
+    paths:
+      - "groups.json"
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Ensure the full history is fetched for committing changes
+
+      - name: Set up Rust
+        uses: actions/setup-rust@v1
+        with:
+          rust-version: 1.70
+
+      - name: Build Rust project
+        run: cargo build --release
+
+      - name: Convert JSON to BIN
+        run: |
+          ./target/release/groups groups.json groups.bin
+
+      - name: Commit and Push BIN file
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add groups.bin
+          git commit -m "Update groups.bin from GitHub Actions"
+          git push origin main
