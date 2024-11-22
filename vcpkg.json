@@ -1,0 +1,6 @@
+{
+  "name": "runner",
+  "version": "1.0.0",
+  "dependencies": ["curl", "openssl", "zlib", "msgpack"],
+  "builtin-baseline": "7f9f0e44db287e8e67c0e888141bfa200ab45121"
+}
