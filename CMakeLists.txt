@@ -16,6 +16,10 @@ endif ()
 project(Runner)
 set(CMAKE_CXX_STANDARD 23)
 
+if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+    add_compile_definitions(INFINITY_TESTS)
+endif ()
+
 find_package(ZLIB REQUIRED)
 find_package(OpenSSL REQUIRED)
 find_package(CURL REQUIRED)

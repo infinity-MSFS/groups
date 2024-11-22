@@ -1,12 +1,71 @@
-#include "Deserialize.hpp"
+
 #include "Fetcher/Fetcher.hpp"
 #include "Builder/Builder.hpp"
 #include "Deserialize/Deserialize.hpp"
 #include "Encryption/Encryption.hpp"
 #include "BinaryStructure/BinaryStructure.hpp"
 
+#ifdef INFINITY_TESTS
+#include <filesystem>
+#include <fstream>
 
-int main(int argc, char **argv) {
+std::vector<unsigned char> readBinaryFile(const std::filesystem::path &filePath) {
+    std::ifstream file(filePath, std::ios::binary | std::ios::ate);
+    if (!file) {
+        throw std::runtime_error("Error opening file: " + filePath.string());
+    }
+
+    const std::streamsize size = file.tellg();
+    file.seekg(0, std::ios::beg);
+
+    std::vector<unsigned char> buffer(size);
+    if (!file.read(reinterpret_cast<char *>(buffer.data()), size)) {
+        throw std::runtime_error("Error reading file: " + filePath.string());
+    }
+
+    return buffer;
+}
+#endif
+
+
+int main(int argc, char *argv[]) {
+    std::vector<Types::Incoming::GroupData> active_groups_raw;
+#ifdef INFINITY_TESTS
+
+    if (argc < 2) {
+        std::cerr << "Usage: " << argv[0] << " <Bin Directory>" << std::endl;
+        return 1;
+    }
+
+    std::filesystem::path directory(argv[1]);
+
+    if (!exists(directory) || !is_directory(directory)) {
+        std::cerr << "Invalid directory: " << directory << std::endl;
+        return 1;
+    }
+
+
+    try {
+        for (const auto &entry: std::filesystem::directory_iterator(directory)) {
+            if (is_regular_file(entry) && entry.path().extension() == ".bin") {
+                std::vector<unsigned char> binaryContent = readBinaryFile(entry.path());
+                auto unencrypted_bin = Encryption::Encryption::DecryptBinary(binaryContent, Encryption::keys::admin_key);
+                const auto deserializer = new Deserialize(unencrypted_bin);
+                auto [groupData, key] = deserializer->GetIncomingBinary();
+                if (const auto decrypted_key = Encryption::Encryption::DecryptFromBase64(key, Encryption::keys::group_decrypt_key);
+                    decrypted_key != Encryption::keys::GetKeyFromString(groupData.name)) {
+                    throw std::invalid_argument("Wrong key for group " + groupData.name);
+                }
+                active_groups_raw.emplace_back(groupData);
+            }
+        }
+    } catch (const std::exception &ex) {
+        std::cerr << "Error: " << ex.what() << std::endl;
+        return 1;
+    }
+
+
+#else
     std::string active_group_url = "https://github.com/infinity-MSFS/groups/raw/refs/heads/main/activeGroups.cfg";
 
     const auto groups_raw = Fetcher::FetchString(active_group_url);
@@ -14,7 +73,7 @@ int main(int argc, char **argv) {
     auto groups = active_group_deserializer->GetActiveGroups();
     delete active_group_deserializer;
 
-    std::vector<Types::Incoming::GroupData> active_groups_raw;
+
     for (const auto &group: groups) {
         std::string url = "https://github.com/infinity-MSFS/groups/blob/" + group + "/";
         url.append(group + ".bin");
@@ -27,6 +86,7 @@ int main(int argc, char **argv) {
         }
         active_groups_raw.emplace_back(groupData);
     }
+#endif
 
     std::vector<Types::Outgoing::GroupData> outgoing_groups_raw;
 
