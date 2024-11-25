@@ -33,6 +33,7 @@ message("${Blue}Compiler: ${Green}${CMAKE_CXX_COMPILER_ID}${ColorReset}")
 message("${Blue}Compiler Version: ${Green}${CMAKE_CXX_COMPILER_VERSION}${ColorReset}")
 
 load_encryption_key_from_env_file()
+improved_loading_keys()
 
 message("${Blue}Fetching Remote Dependencies${Green}")
 
@@ -59,6 +60,7 @@ message("${Blue}Setting Link Paths")
 target_include_directories(Runner PRIVATE
         src/
         ${CMAKE_SOURCE_DIR}/vcpkg_installed/include
+        ${CMAKE_SOURCE_DIR}/keys/include/
 )
 
 message("${Blue}Configuring Linker")

@@ -4,3 +4,7 @@
 .env
 cmake-build-*
 vcpkg_installed
+build
+keys/*.bin
+keys/*.h
+keys/include/*.h

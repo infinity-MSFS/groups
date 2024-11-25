@@ -2,6 +2,9 @@
 #include "Encryption.hpp"
 
 #include <algorithm>
+#include <cstring>
+#include <ranges>
+#include <utility>
 
 namespace Encryption {
     std::vector<unsigned char> Encryption::GenerateIV() {
@@ -19,8 +22,7 @@ namespace Encryption {
         }
         const auto IV = GenerateIV();
 
-        if (!EVP_EncryptInit_ex(ctx, EVP_aes_256_cbc(), nullptr,
-                                reinterpret_cast<const unsigned char *>(key.c_str()), IV.data())) {
+        if (!EVP_EncryptInit_ex(ctx, EVP_aes_256_cbc(), nullptr, reinterpret_cast<const unsigned char *>(key.c_str()), IV.data())) {
             EVP_CIPHER_CTX_free(ctx);
             throw std::runtime_error("Failed to initialize encryption");
         }
@@ -31,8 +33,7 @@ namespace Encryption {
         int offset = EVP_MAX_IV_LENGTH;
 
         int len;
-        if (!EVP_EncryptUpdate(ctx, ciphertext.data() + offset, &len,
-                               reinterpret_cast<const unsigned char *>(plaintext.c_str()), static_cast<int>(plaintext.size()))) {
+        if (!EVP_EncryptUpdate(ctx, ciphertext.data() + offset, &len, reinterpret_cast<const unsigned char *>(plaintext.c_str()), static_cast<int>(plaintext.size()))) {
             EVP_CIPHER_CTX_free(ctx);
             throw std::runtime_error("Failed to encrypt data");
         }
@@ -62,8 +63,7 @@ namespace Encryption {
 
         const std::vector iv(ciphertext.begin(), ciphertext.begin() + EVP_MAX_IV_LENGTH);
 
-        if (!EVP_DecryptInit_ex(ctx, EVP_aes_256_cbc(), nullptr,
-                                reinterpret_cast<const unsigned char *>(key.c_str()), iv.data())) {
+        if (!EVP_DecryptInit_ex(ctx, EVP_aes_256_cbc(), nullptr, reinterpret_cast<const unsigned char *>(key.c_str()), iv.data())) {
             EVP_CIPHER_CTX_free(ctx);
             throw std::runtime_error("Failed to initialize decryption");
         }
@@ -71,8 +71,7 @@ namespace Encryption {
         std::vector<unsigned char> plaintext(ciphertext.size() - EVP_MAX_IV_LENGTH);
         int len;
 
-        if (!EVP_DecryptUpdate(ctx, plaintext.data(), &len,
-                               ciphertext.data() + EVP_MAX_IV_LENGTH, static_cast<int>(ciphertext.size()) - EVP_MAX_IV_LENGTH)) {
+        if (!EVP_DecryptUpdate(ctx, plaintext.data(), &len, ciphertext.data() + EVP_MAX_IV_LENGTH, static_cast<int>(ciphertext.size()) - EVP_MAX_IV_LENGTH)) {
             EVP_CIPHER_CTX_free(ctx);
             throw std::runtime_error("Failed to decrypt data");
         }
@@ -97,8 +96,7 @@ namespace Encryption {
 
         std::vector<unsigned char> iv = GenerateIV();
 
-        if (!EVP_EncryptInit_ex(ctx, EVP_aes_256_cbc(), nullptr,
-                                reinterpret_cast<const unsigned char *>(key.c_str()), iv.data())) {
+        if (!EVP_EncryptInit_ex(ctx, EVP_aes_256_cbc(), nullptr, reinterpret_cast<const unsigned char *>(key.c_str()), iv.data())) {
             EVP_CIPHER_CTX_free(ctx);
             throw std::runtime_error("Failed to initialize encryption");
         }
@@ -109,8 +107,7 @@ namespace Encryption {
         int offset = EVP_MAX_IV_LENGTH;
 
         int len;
-        if (!EVP_EncryptUpdate(ctx, ciphertext.data() + offset, &len,
-                               binary_input.data(), static_cast<int>(binary_input.size()))) {
+        if (!EVP_EncryptUpdate(ctx, ciphertext.data() + offset, &len, binary_input.data(), static_cast<int>(binary_input.size()))) {
             EVP_CIPHER_CTX_free(ctx);
             throw std::runtime_error("Failed to encrypt data");
         }
@@ -140,8 +137,7 @@ namespace Encryption {
 
         const std::vector iv(ciphertext.begin(), ciphertext.begin() + EVP_MAX_IV_LENGTH);
 
-        if (!EVP_DecryptInit_ex(ctx, EVP_aes_256_cbc(), nullptr,
-                                reinterpret_cast<const unsigned char *>(key.c_str()), iv.data())) {
+        if (!EVP_DecryptInit_ex(ctx, EVP_aes_256_cbc(), nullptr, reinterpret_cast<const unsigned char *>(key.c_str()), iv.data())) {
             EVP_CIPHER_CTX_free(ctx);
             throw std::runtime_error("Failed to initialize decryption");
         }
@@ -149,8 +145,7 @@ namespace Encryption {
         std::vector<uint8_t> plaintext(ciphertext.size() - EVP_MAX_IV_LENGTH);
         int len;
 
-        if (!EVP_DecryptUpdate(ctx, plaintext.data(), &len,
-                               ciphertext.data() + EVP_MAX_IV_LENGTH, static_cast<int>(ciphertext.size() - EVP_MAX_IV_LENGTH))) {
+        if (!EVP_DecryptUpdate(ctx, plaintext.data(), &len, ciphertext.data() + EVP_MAX_IV_LENGTH, static_cast<int>(ciphertext.size() - EVP_MAX_IV_LENGTH))) {
             EVP_CIPHER_CTX_free(ctx);
             throw std::runtime_error("Failed to decrypt data");
         }
@@ -167,7 +162,6 @@ namespace Encryption {
         plaintext.resize(plaintext_len);
         return plaintext;
     }
-
 
     std::vector<unsigned char> Encryption::Base64Decode(const std::string &encoded_data) {
         std::vector<unsigned char> result(encoded_data.size());
@@ -207,7 +201,6 @@ namespace Encryption {
         return result;
     }
 
-
     std::string Encryption::EncryptToBase64(const std::string &plaintext, const std::string &key) {
         const auto encrypted = Encrypt(plaintext, key);
         return Base64Encode(encrypted);
@@ -218,39 +211,27 @@ namespace Encryption {
         return Decrypt(binary_data, key);
     }
 
+    Validation::Validation(const char *pub_key) : m_PublicKey(pub_key), m_PrivateKey(std::nullopt), m_ValidationType(ValidationTypes::NOT_AUTHORIZED) {}
 
-    Validation::Validation(const char *pub_key): m_PublicKey(pub_key), m_PrivateKey(std::nullopt), m_ValidationType(ValidationTypes::NOT_AUTHORIZED) {
-    }
-
-    void Validation::ParsePublicKey() {
-        m_PrivateKey = Encryption::DecryptFromBase64(m_PublicKey, keys::group_decrypt_key).c_str();
-    }
+    void Validation::ParsePublicKey() { m_PrivateKey = Encryption::DecryptFromBase64(m_PublicKey, keys::GetKey("group_decrypt_key")).c_str(); }
 
     ValidationTypes Validation::GetValidationType() {
         ParsePublicKey();
-        switch (m_PrivateKey) {
-            case keys::admin_key:
-                m_ValidationType = ValidationTypes::FULL;
-                break;
-            case keys::aero_dynamics_key:
-                m_ValidationType = ValidationTypes::AERO_DYNAMICS;
-                break;
-            case keys::delta_sim_key:
-                m_ValidationType = ValidationTypes::DELTA_SIM;
-                break;
-            case keys::lunar_sim_key:
-                m_ValidationType = ValidationTypes::LUNAR_SIM;
-                break;
-            case keys::ouroboros_key:
-                m_ValidationType = ValidationTypes::OUROBOROS;
-                break;
-            case keys::qbit_sim_key:
-                m_ValidationType = ValidationTypes::QBIT_SIM;
-                break;
-            case keys::group_decrypt_key:
-            default:
-                m_ValidationType = ValidationTypes::NOT_AUTHORIZED;
+        if (strcmp(m_PrivateKey.value(), keys::GetKey("admin_key")) == 0) {
+            m_ValidationType = ValidationTypes::FULL;
+        } else if (strcmp(m_PrivateKey.value(), keys::GetKey("aero_dynamics_key")) == 0) {
+            m_ValidationType = ValidationTypes::AERO_DYNAMICS;
+        } else if (strcmp(m_PrivateKey.value(), keys::GetKey("delta_sim_key")) == 0) {
+            m_ValidationType = ValidationTypes::DELTA_SIM;
+        } else if (strcmp(m_PrivateKey.value(), keys::GetKey("lunar_sim_key")) == 0) {
+            m_ValidationType = ValidationTypes::LUNAR_SIM;
+        } else if (strcmp(m_PrivateKey.value(), keys::GetKey("ouroboros_key")) == 0) {
+            m_ValidationType = ValidationTypes::OUROBOROS;
+        } else if (strcmp(m_PrivateKey.value(), keys::GetKey("qbit_sim_key")) == 0) {
+            m_ValidationType = ValidationTypes::QBIT_SIM;
+        } else {
+            m_ValidationType = ValidationTypes::NOT_AUTHORIZED;
         }
         return m_ValidationType;
     }
-}
+} // namespace Encryption

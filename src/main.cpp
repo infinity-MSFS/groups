@@ -1,11 +1,11 @@
 
-#include "Fetcher/Fetcher.hpp"
+#include "BinaryStructure/BinaryStructure.hpp"
 #include "Builder/Builder.hpp"
 #include "Deserialize/Deserialize.hpp"
 #include "Encryption/Encryption.hpp"
-#include "BinaryStructure/BinaryStructure.hpp"
+#include "Fetcher/Fetcher.hpp"
 
-#ifdef INFINITY_TESTS
+#ifndef INFINITY_TESTS
 #include <filesystem>
 #include <fstream>
 
@@ -30,7 +30,7 @@ std::vector<unsigned char> readBinaryFile(const std::filesystem::path &filePath)
 
 int main(int argc, char *argv[]) {
     std::vector<Types::Incoming::GroupData> active_groups_raw;
-#ifdef INFINITY_TESTS
+#ifndef INFINITY_TESTS
 
     if (argc < 2) {
         std::cerr << "Usage: " << argv[0] << " <Bin Directory>" << std::endl;
@@ -44,16 +44,22 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+    auto key = Encryption::keys::GetKey("admin_key");
+
+    for (int i = 0; key[i] != '\0'; i++) {
+        std::cout << std::hex << std::setw(2) << std::setfill('0') << (int) key[i] << " ";
+    }
+    std::cout << std::endl;
 
     try {
         for (const auto &entry: std::filesystem::directory_iterator(directory)) {
             if (is_regular_file(entry) && entry.path().extension() == ".bin") {
                 std::vector<unsigned char> binaryContent = readBinaryFile(entry.path());
-                auto unencrypted_bin = Encryption::Encryption::DecryptBinary(binaryContent, Encryption::keys::admin_key);
+                auto unencrypted_bin = Encryption::Encryption::DecryptBinary(binaryContent, Encryption::keys::GetKey("admin_key"));
                 const auto deserializer = new Deserialize(unencrypted_bin);
                 auto [groupData, key] = deserializer->GetIncomingBinary();
-                if (const auto decrypted_key = Encryption::Encryption::DecryptFromBase64(key, Encryption::keys::group_decrypt_key);
-                    decrypted_key != Encryption::keys::GetKeyFromString(groupData.name)) {
+                if (const auto decrypted_key = Encryption::Encryption::DecryptFromBase64(key, Encryption::keys::GetKey("group_decrypt_key"));
+                    decrypted_key != Encryption::keys::GetKey(groupData.name.c_str())) {
                     throw std::invalid_argument("Wrong key for group " + groupData.name);
                 }
                 active_groups_raw.emplace_back(groupData);
@@ -95,16 +101,8 @@ int main(int argc, char *argv[]) {
         std::vector<Types::Outgoing::Project> projects;
         for (const auto &project: group.projects) {
             const auto changelog = Fetcher::FetchString(project.changelogLink);
-            const auto new_project = Types::Outgoing::Project{
-                project.name,
-                project.description,
-                project.overview,
-                changelog,
-                project.background,
-                project.pageBackground,
-                project.variants,
-                {project.packages}
-            };
+            const auto new_project =
+                    Types::Outgoing::Project{project.name, project.description, project.overview, changelog, project.background, project.pageBackground, project.variants, {project.packages}};
             projects.emplace_back(new_project);
         }
         new_group_data.name = group.name;
@@ -112,13 +110,7 @@ int main(int argc, char *argv[]) {
         new_group_data.logo = group.logo;
         new_group_data.betaBackground = group.betaBackground;
         new_group_data.palette = Types::Outgoing::Palette{
-            group.palette.primary,
-            group.palette.secondary,
-            group.palette.circle1,
-            group.palette.circle2,
-            group.palette.circle3,
-            group.palette.circle4,
-            group.palette.circle5,
+                group.palette.primary, group.palette.secondary, group.palette.circle1, group.palette.circle2, group.palette.circle3, group.palette.circle4, group.palette.circle5,
         };
         new_group_data.isHidden = false;
 
@@ -131,7 +123,7 @@ int main(int argc, char *argv[]) {
     }
 
     const auto compressed_output = Builder::SerializeAndCompress(outgoing_groups);
-    const auto encrypted_output = Encryption::Encryption::EncryptBinary(compressed_output, Encryption::keys::admin_key);
+    const auto encrypted_output = Encryption::Encryption::EncryptBinary(compressed_output, Encryption::keys::GetKey("admin_key"));
 
     Builder::WriteToFile("groups.bin", encrypted_output);
 
